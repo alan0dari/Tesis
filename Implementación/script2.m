@@ -10,20 +10,13 @@ hold(axes1,'on');
 scatter(Particulas(:,4), Particulas(:,5));
 hold on;
 scatter(Pareto(:,4),Pareto(:,5),25,'MarkerEdgeColor','r','MarkerFaceColor','r','LineWidth',1.5);
-xlabel('Entropía','FontWeight','bold','FontSize',24,'FontName','Lucida Bright');
-ylabel('SSIM','FontWeight','bold','FontSize',24,'FontName','Lucida Bright');
+xlabel('Función Objetivo 1','FontWeight','bold','FontSize',24,'FontName','Lucida Bright');
+ylabel('Función Objetivo 2','FontWeight','bold','FontSize',24,'FontName','Lucida Bright');
 legend({'Partículas', 'Frente Pareto'});
 set(legend,'Location','southwest','FontAngle','italic','FontSize',14,'FontName','Lucida Bright');
 set(axes1,'FontName','Lucida Bright','FontSize',18);
-annotation(fig_pareto,'textbox',...
-    [0.157662032114814 0.534562144131562 0.278518510438778 0.104454682444647],...
-    'String',{strcat('Total partículas: ', string(m2)), strcat('Frente Pareto :',string(m),' soluciones')},...
-    'FontSize',18,...
-    'FontName','Lucida Bright',...
-    'FontAngle','italic',...
-    'FitBoxToText','off');
-filename = strcat(path,'pareto.svg');
-filename2 = strcat(path,'pareto.fig');
+filename = strcat(path,'pareto2.svg');
+filename2 = strcat(path,'pareto2.fig');
 saveas(fig_pareto,filename);
 saveas(fig_pareto,filename2);
 
